@@ -1,0 +1,693 @@
+[gd_scene format=3 uid="uid://b416u345n5pgi"]
+
+[ext_resource type="Script" uid="uid://bv50enmlk67jx" path="res://Code/Memory_game.cs" id="1_2xxb6"]
+[ext_resource type="Script" uid="uid://yf0gm3yiowwd" path="res://Code/Image_splitter.cs" id="1_8jn7c"]
+[ext_resource type="Script" uid="uid://cpl2xncadh2o6" path="res://Code/Hover_sprite_pairs.cs" id="1_uecd5"]
+[ext_resource type="Texture2D" uid="uid://cletntyulocn0" path="res://Textures/images.jpg" id="2_fbmhl"]
+[ext_resource type="Script" uid="uid://dgw2nlowxofjo" path="res://Code/Prepare_deck.cs" id="2_p204v"]
+[ext_resource type="Texture2D" uid="uid://duhgnn1c7gh1" path="res://Textures/memory_game_options.png" id="3_fbmhl"]
+[ext_resource type="Script" uid="uid://phe2i4iuhxnt" path="res://Code/Game_menu.cs" id="3_iyixr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xxb6"]
+
+[node name="Memory_game" type="Node2D" unique_id=1637733733]
+script = ExtResource("1_2xxb6")
+cards_root_path = NodePath("board/card_holders")
+
+[node name="Card_dealer" type="Node2D" parent="." unique_id=1878884059]
+script = ExtResource("2_p204v")
+image_splitter_path = NodePath("Image_splitter")
+cards_root_path = NodePath("../board/card_holders")
+
+[node name="Image_splitter" type="Node2D" parent="Card_dealer" unique_id=17009557]
+script = ExtResource("1_8jn7c")
+atlas_path = "res://Textures/images.jpg"
+
+[node name="board" type="Node2D" parent="." unique_id=916492159]
+script = ExtResource("1_uecd5")
+sprites_root_path = NodePath("card_backsides")
+
+[node name="card_backsides" type="Node2D" parent="board" unique_id=58461022]
+
+[node name="11_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=473589281]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(300, 250)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="11_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1485559582]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(300, 250)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="12_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=440977269]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="12_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1060935119]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="13_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=1370963023]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(700, 250)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="13_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1966763051]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(700, 250)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="14_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=1563310805]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(900, 250)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="14_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=918122027]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(900, 250)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="15_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=719063705]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1100, 250)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="15_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1165916882]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1100, 250)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="16_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=440715491]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1300, 250)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="16_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1899741149]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1300, 250)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="21_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=1739055048]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(300, 450)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="21_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1793474700]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(300, 450)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="22_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=362151860]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(500, 450)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="22_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=181949741]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(500, 450)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="23_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=1555437054]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(700, 450)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="23_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=124172085]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(700, 450)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="24_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=100990569]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(900, 450)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="24_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1618143593]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(900, 450)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="25_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=1384166253]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1100, 450)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="25_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=978329566]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1100, 450)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="26_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=1712497984]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1300, 450)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="26_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=551583395]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1300, 450)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="31_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=725654454]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(300, 650)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="31_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=333495646]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(300, 650)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="32_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=221075430]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(500, 650)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="32_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1572025478]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(500, 650)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="33_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=80480848]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(700, 650)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="33_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1156295471]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(700, 650)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="34_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=125683831]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(900, 650)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="34_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=2005935861]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(900, 650)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="35_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=794701156]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1100, 650)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="35_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1945015074]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1100, 650)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="36_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=864408844]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1300, 650)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="36_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1096352769]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1300, 650)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="41_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=485439315]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(300, 850)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="41_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=1249191523]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(300, 850)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="42_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=219185408]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(500, 850)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="42_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=193248364]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(500, 850)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="43_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=1872608213]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(700, 850)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="43_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=13847948]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(700, 850)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="44_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=924635882]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(900, 850)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="44_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=645030120]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(900, 850)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="45_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=579231586]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1100, 850)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="45_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=586948638]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1100, 850)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="46_card_0" type="Sprite2D" parent="board/card_backsides" unique_id=24809832]
+z_index = 1
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1300, 850)
+region_enabled = true
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="46_card_1" type="Sprite2D" parent="board/card_backsides" unique_id=306729108]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = ExtResource("2_fbmhl")
+offset = Vector2(1300, 850)
+region_enabled = true
+region_rect = Rect2(625, 375, 125, 125)
+
+[node name="card_holders" type="Node2D" parent="board" unique_id=100925136]
+
+[node name="11_card" type="Sprite2D" parent="board/card_holders" unique_id=1091231424]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(300, 250)
+region_rect = Rect2(0, 0, 125, 125)
+
+[node name="12_card" type="Sprite2D" parent="board/card_holders" unique_id=803204084]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(500, 250)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="13_card" type="Sprite2D" parent="board/card_holders" unique_id=423248414]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(700, 250)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="14_card" type="Sprite2D" parent="board/card_holders" unique_id=110128562]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(900, 250)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="15_card" type="Sprite2D" parent="board/card_holders" unique_id=725088039]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(1100, 250)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="16_card" type="Sprite2D" parent="board/card_holders" unique_id=634669322]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(1300, 250)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="21_card" type="Sprite2D" parent="board/card_holders" unique_id=801182943]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(300, 450)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="22_card" type="Sprite2D" parent="board/card_holders" unique_id=582728585]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(500, 450)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="23_card" type="Sprite2D" parent="board/card_holders" unique_id=779465391]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(700, 450)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="24_card" type="Sprite2D" parent="board/card_holders" unique_id=1542545490]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(900, 450)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="25_card" type="Sprite2D" parent="board/card_holders" unique_id=230872567]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(1100, 450)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="26_card" type="Sprite2D" parent="board/card_holders" unique_id=885146254]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(1300, 450)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="31_card" type="Sprite2D" parent="board/card_holders" unique_id=1921842540]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(300, 650)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="32_card" type="Sprite2D" parent="board/card_holders" unique_id=1622746195]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(500, 650)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="33_card" type="Sprite2D" parent="board/card_holders" unique_id=849576234]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(700, 650)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="34_card" type="Sprite2D" parent="board/card_holders" unique_id=71165356]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(900, 650)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="35_card" type="Sprite2D" parent="board/card_holders" unique_id=1796294086]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(1100, 650)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="36_card" type="Sprite2D" parent="board/card_holders" unique_id=1741988903]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(1300, 650)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="41_card" type="Sprite2D" parent="board/card_holders" unique_id=244759305]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(300, 850)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="42_card" type="Sprite2D" parent="board/card_holders" unique_id=1272161826]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(500, 850)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="43_card" type="Sprite2D" parent="board/card_holders" unique_id=435919745]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(700, 850)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="44_card" type="Sprite2D" parent="board/card_holders" unique_id=1949772871]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(900, 850)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="45_card" type="Sprite2D" parent="board/card_holders" unique_id=971242935]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(1100, 850)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="46_card" type="Sprite2D" parent="board/card_holders" unique_id=1907372052]
+z_as_relative = false
+position = Vector2(-88, 0)
+texture = SubResource("AtlasTexture_2xxb6")
+offset = Vector2(1300, 850)
+region_rect = Rect2(500, 375, 125, 125)
+
+[node name="game_menu" type="Node2D" parent="." unique_id=1720460395]
+position = Vector2(0, -104)
+script = ExtResource("3_iyixr")
+sprites_root_path = NodePath(".")
+
+[node name="new_game_0" type="Sprite2D" parent="game_menu" unique_id=157085196]
+z_as_relative = false
+texture = ExtResource("3_fbmhl")
+offset = Vector2(1650, 500)
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 125)
+
+[node name="new_game_1" type="Sprite2D" parent="game_menu" unique_id=589197549]
+visible = false
+z_index = 1
+z_as_relative = false
+texture = ExtResource("3_fbmhl")
+offset = Vector2(1650, 500)
+region_enabled = true
+region_rect = Rect2(0, 125, 500, 125)
+
+[node name="return_main_menu_0" type="Sprite2D" parent="game_menu" unique_id=1738015268]
+z_as_relative = false
+texture = ExtResource("3_fbmhl")
+offset = Vector2(1650, 750)
+region_enabled = true
+region_rect = Rect2(0, 250, 500, 250)
+
+[node name="return_main_menu_1" type="Sprite2D" parent="game_menu" unique_id=754077641]
+visible = false
+z_index = 1
+z_as_relative = false
+texture = ExtResource("3_fbmhl")
+offset = Vector2(1650, 750)
+region_enabled = true
+region_rect = Rect2(0, 500, 500, 250)

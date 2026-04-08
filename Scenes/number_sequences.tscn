@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://d23ih667mdqys"]
+
+[ext_resource type="Script" uid="uid://phe2i4iuhxnt" path="res://Code/Game_menu.cs" id="1_aumq3"]
+[ext_resource type="Texture2D" uid="uid://duhgnn1c7gh1" path="res://Textures/memory_game_options.png" id="2_3kgj7"]
+
+[node name="Number_sequences" type="Node2D" unique_id=180844156]
+
+[node name="game_menu" type="Node2D" parent="." unique_id=1159752115]
+position = Vector2(0, -104)
+script = ExtResource("1_aumq3")
+sprites_root_path = NodePath(".")
+
+[node name="new_game_0" type="Sprite2D" parent="game_menu" unique_id=1699108525]
+z_as_relative = false
+texture = ExtResource("2_3kgj7")
+offset = Vector2(1650, 500)
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 125)
+
+[node name="new_game_1" type="Sprite2D" parent="game_menu" unique_id=1238125447]
+visible = false
+z_index = 1
+z_as_relative = false
+texture = ExtResource("2_3kgj7")
+offset = Vector2(1650, 500)
+region_enabled = true
+region_rect = Rect2(0, 125, 500, 125)
+
+[node name="return_main_menu_0" type="Sprite2D" parent="game_menu" unique_id=197666769]
+z_as_relative = false
+texture = ExtResource("2_3kgj7")
+offset = Vector2(1650, 750)
+region_enabled = true
+region_rect = Rect2(0, 250, 500, 250)
+
+[node name="return_main_menu_1" type="Sprite2D" parent="game_menu" unique_id=301304573]
+visible = false
+z_index = 1
+z_as_relative = false
+texture = ExtResource("2_3kgj7")
+offset = Vector2(1650, 750)
+region_enabled = true
+region_rect = Rect2(0, 500, 500, 250)

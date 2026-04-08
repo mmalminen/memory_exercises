@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bo8u64ty2r00l"]
+
+[ext_resource type="Script" uid="uid://du88lmvxxpyyf" path="res://Code/Main_menu.cs" id="1_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://dl56mgh25nc3b" path="res://Textures/main_menu_background.png" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://dvocqm7ksrufn" path="res://Textures/launcher_images.png" id="3_ce3w2"]
+
+[node name="Main_menu" type="Node2D" unique_id=337389794]
+script = ExtResource("1_1ehe0")
+sprites_root_path = NodePath("functional_images")
+
+[node name="background_image" type="Sprite2D" parent="." unique_id=886784030]
+z_as_relative = false
+position = Vector2(960, 537)
+texture = ExtResource("1_28flt")
+
+[node name="functional_images" type="Node2D" parent="." unique_id=597623200]
+
+[node name="memory_game_0" type="Sprite2D" parent="functional_images" unique_id=210561931]
+z_as_relative = false
+position = Vector2(946, 537)
+texture = ExtResource("3_ce3w2")
+offset = Vector2(700, -50)
+region_enabled = true
+region_rect = Rect2(0, 100, 500, 100)
+
+[node name="memory_game_1" type="Sprite2D" parent="functional_images" unique_id=199272443]
+visible = false
+z_index = 1
+z_as_relative = false
+position = Vector2(948, 536)
+texture = ExtResource("3_ce3w2")
+offset = Vector2(700, -50)
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 100)
+
+[node name="number_sequences_0" type="Sprite2D" parent="functional_images" unique_id=1914611502]
+z_as_relative = false
+position = Vector2(946, 537)
+texture = ExtResource("3_ce3w2")
+offset = Vector2(700, 100)
+region_enabled = true
+region_rect = Rect2(0, 300, 500, 100)
+
+[node name="number_sequences_1" type="Sprite2D" parent="functional_images" unique_id=687205481]
+visible = false
+z_index = 1
+z_as_relative = false
+position = Vector2(948, 536)
+texture = ExtResource("3_ce3w2")
+offset = Vector2(700, 100)
+region_enabled = true
+region_rect = Rect2(0, 200, 500, 100)
+
+[node name="missing_image_0" type="Sprite2D" parent="functional_images" unique_id=20785309]
+z_as_relative = false
+position = Vector2(946, 537)
+texture = ExtResource("3_ce3w2")
+offset = Vector2(700, 250)
+region_enabled = true
+region_rect = Rect2(0, 500, 500, 100)
+
+[node name="missing_image_1" type="Sprite2D" parent="functional_images" unique_id=1475628568]
+visible = false
+z_index = 1
+z_as_relative = false
+position = Vector2(948, 536)
+texture = ExtResource("3_ce3w2")
+offset = Vector2(700, 250)
+region_enabled = true
+region_rect = Rect2(0, 400, 500, 100)
+
+[node name="close_application_0" type="Sprite2D" parent="functional_images" unique_id=1203503304]
+z_as_relative = false
+position = Vector2(2245, 719)
+texture = ExtResource("3_ce3w2")
+offset = Vector2(-599, 218)
+region_enabled = true
+region_rect = Rect2(0, 750, 500, 125)
+
+[node name="close_application_1" type="Sprite2D" parent="functional_images" unique_id=943273003]
+visible = false
+z_index = 1
+z_as_relative = false
+position = Vector2(948, 536)
+texture = ExtResource("3_ce3w2")
+offset = Vector2(700, 400)
+region_enabled = true
+region_rect = Rect2(0, 625, 500, 125)
