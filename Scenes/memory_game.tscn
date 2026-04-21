@@ -22,6 +22,7 @@ cards_root_path = NodePath("../board/card_holders")
 [node name="Image_splitter" type="Node2D" parent="Card_dealer" unique_id=17009557]
 script = ExtResource("1_8jn7c")
 atlas_path = "res://Textures/images.jpg"
+ignore_last = 2
 
 [node name="board" type="Node2D" parent="." unique_id=916492159]
 script = ExtResource("1_uecd5")

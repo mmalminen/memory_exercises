@@ -1,9 +1,388 @@
 [gd_scene format=3 uid="uid://d23ih667mdqys"]
 
+[ext_resource type="Script" uid="uid://yf0gm3yiowwd" path="res://Code/Image_splitter.cs" id="1_3d5dp"]
+[ext_resource type="Texture2D" uid="uid://dnj03vmxj14ft" path="res://Textures/icon.jpg" id="1_8wvor"]
 [ext_resource type="Script" uid="uid://phe2i4iuhxnt" path="res://Code/Game_menu.cs" id="1_aumq3"]
 [ext_resource type="Texture2D" uid="uid://duhgnn1c7gh1" path="res://Textures/memory_game_options.png" id="2_3kgj7"]
+[ext_resource type="Texture2D" uid="uid://bgl30onr1y0dj" path="res://Textures/numbers.png" id="3_3kgj7"]
+[ext_resource type="Script" uid="uid://cpl2xncadh2o6" path="res://Code/Hover_sprite_pairs.cs" id="3_5lt6t"]
+[ext_resource type="Texture2D" uid="uid://c01y8id17dr1y" path="res://Textures/symbols.png" id="4_r5v0r"]
 
 [node name="Number_sequences" type="Node2D" unique_id=180844156]
+
+[node name="sequence_table" type="Node2D" parent="." unique_id=63533709]
+
+[node name="image_splitter" type="Node2D" parent="sequence_table" unique_id=1151675993]
+position = Vector2(0, 300)
+script = ExtResource("1_3d5dp")
+atlas_path = "res://Textures/numbers.png"
+ignore_first = 10
+
+[node name="input_field" type="Node2D" parent="sequence_table" unique_id=1918770774]
+
+[node name="input_field_slot_0" type="Sprite2D" parent="sequence_table/input_field" unique_id=1788525254]
+position = Vector2(100, 150)
+
+[node name="input_field_slot_1" type="Sprite2D" parent="sequence_table/input_field" unique_id=161743761]
+position = Vector2(250, 150)
+
+[node name="input_field_slot_2" type="Sprite2D" parent="sequence_table/input_field" unique_id=1358790311]
+position = Vector2(400, 150)
+
+[node name="input_field_slot_3" type="Sprite2D" parent="sequence_table/input_field" unique_id=329189631]
+position = Vector2(550, 150)
+
+[node name="input_field_slot_4" type="Sprite2D" parent="sequence_table/input_field" unique_id=986529013]
+position = Vector2(700, 150)
+
+[node name="input_field_slot_5" type="Sprite2D" parent="sequence_table/input_field" unique_id=673942727]
+position = Vector2(850, 150)
+
+[node name="input_field_slot_6" type="Sprite2D" parent="sequence_table/input_field" unique_id=1296706200]
+position = Vector2(1000, 150)
+
+[node name="input_field_slot_7" type="Sprite2D" parent="sequence_table/input_field" unique_id=1355424205]
+position = Vector2(1150, 150)
+
+[node name="input_field_slot_8" type="Sprite2D" parent="sequence_table/input_field" unique_id=615834980]
+position = Vector2(1300, 150)
+
+[node name="numbers" type="Node2D" parent="sequence_table" unique_id=1279963457]
+position = Vector2(0, 300)
+
+[node name="number_slot_0" type="Sprite2D" parent="sequence_table/numbers" unique_id=1145669257]
+position = Vector2(100, 150)
+
+[node name="number_slot_1" type="Sprite2D" parent="sequence_table/numbers" unique_id=1827233876]
+position = Vector2(250, 150)
+
+[node name="number_slot_2" type="Sprite2D" parent="sequence_table/numbers" unique_id=328750300]
+position = Vector2(400, 150)
+
+[node name="number_slot_3" type="Sprite2D" parent="sequence_table/numbers" unique_id=205735065]
+position = Vector2(550, 150)
+
+[node name="number_slot_4" type="Sprite2D" parent="sequence_table/numbers" unique_id=1234035921]
+position = Vector2(700, 150)
+
+[node name="number_slot_5" type="Sprite2D" parent="sequence_table/numbers" unique_id=1258658485]
+position = Vector2(850, 150)
+
+[node name="number_slot_6" type="Sprite2D" parent="sequence_table/numbers" unique_id=2038724460]
+position = Vector2(1000, 150)
+
+[node name="number_slot_7" type="Sprite2D" parent="sequence_table/numbers" unique_id=820558556]
+position = Vector2(1150, 150)
+
+[node name="number_slot_8" type="Sprite2D" parent="sequence_table/numbers" unique_id=478795733]
+position = Vector2(1300, 150)
+
+[node name="card_backsides" type="Node2D" parent="sequence_table" unique_id=1966089551]
+position = Vector2(0, 292)
+
+[node name="card_0" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=147030060]
+position = Vector2(100, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="card_1" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=886586573]
+position = Vector2(250, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="card_2" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=323799883]
+position = Vector2(400, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="card_3" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=1354013745]
+position = Vector2(550, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="card_4" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=70070969]
+position = Vector2(700, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="card_5" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=1925102338]
+position = Vector2(850, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="card_6" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=1292698361]
+position = Vector2(1000, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="card_7" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=1720671125]
+position = Vector2(1150, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="card_8" type="Sprite2D" parent="sequence_table/card_backsides" unique_id=1082072122]
+position = Vector2(1300, 150)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_8wvor")
+
+[node name="user_interface" type="Node2D" parent="." unique_id=935890827]
+
+[node name="number_buttons" type="Node2D" parent="user_interface" unique_id=516321255]
+position = Vector2(0, -108)
+script = ExtResource("3_5lt6t")
+sprites_root_path = NodePath(".")
+
+[node name="zero_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=538566488]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-100, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(0, 252, 126, 126)
+
+[node name="zero_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1826862159]
+z_index = 1
+z_as_relative = false
+position = Vector2(-100, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(0, 0, 126, 126)
+
+[node name="one_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=646813518]
+z_index = 1
+z_as_relative = false
+position = Vector2(50, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(126, 0, 126, 126)
+
+[node name="one_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1115902245]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(50, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(126, 252, 126, 126)
+
+[node name="two_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1912391317]
+z_index = 1
+z_as_relative = false
+position = Vector2(200, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(252, 0, 126, 126)
+
+[node name="two_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1880723033]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(200, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(252, 252, 126, 126)
+
+[node name="three_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1762880194]
+z_index = 1
+z_as_relative = false
+position = Vector2(350, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(378, 0, 126, 126)
+
+[node name="three_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=251399847]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(350, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(378, 252, 126, 126)
+
+[node name="four_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1665354203]
+z_index = 1
+z_as_relative = false
+position = Vector2(500, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(504, 0, 126, 126)
+
+[node name="four_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1511220086]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(500, 500)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(504, 252, 126, 126)
+
+[node name="fife_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=511210843]
+z_index = 1
+z_as_relative = false
+position = Vector2(-100, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(0, 126, 126, 126)
+
+[node name="fife_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=2059125147]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(-100, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(0, 378, 126, 126)
+
+[node name="six_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=458631446]
+z_index = 1
+z_as_relative = false
+position = Vector2(50, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(126, 126, 126, 126)
+
+[node name="six_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=550041660]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(50, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(126, 378, 126, 126)
+
+[node name="seven_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=637392259]
+z_index = 1
+z_as_relative = false
+position = Vector2(200, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(252, 126, 126, 126)
+
+[node name="seven_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1025641899]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(200, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(252, 378, 126, 126)
+
+[node name="eight_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=164293370]
+z_index = 1
+z_as_relative = false
+position = Vector2(350, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(378, 126, 126, 126)
+
+[node name="eight_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=890357015]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(350, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(378, 378, 126, 126)
+
+[node name="nine_0" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1802838918]
+z_index = 1
+z_as_relative = false
+position = Vector2(500, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(504, 126, 126, 126)
+
+[node name="nine_1" type="Sprite2D" parent="user_interface/number_buttons" unique_id=1136949188]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(500, 650)
+texture = ExtResource("3_3kgj7")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(504, 378, 126, 126)
+
+[node name="symbol_buttons" type="Node2D" parent="user_interface" unique_id=184005441]
+position = Vector2(0, -108)
+script = ExtResource("3_5lt6t")
+sprites_root_path = NodePath(".")
+
+[node name="clear_0" type="Sprite2D" parent="user_interface/symbol_buttons" unique_id=1067258325]
+z_index = 1
+z_as_relative = false
+position = Vector2(50, 802)
+texture = ExtResource("4_r5v0r")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(126, 0, 126, 126)
+
+[node name="clear_1" type="Sprite2D" parent="user_interface/symbol_buttons" unique_id=247653508]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(50, 800)
+texture = ExtResource("4_r5v0r")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(126, 126, 126, 126)
+
+[node name="erase_0" type="Sprite2D" parent="user_interface/symbol_buttons" unique_id=1251416731]
+z_index = 1
+z_as_relative = false
+position = Vector2(200, 800)
+texture = ExtResource("4_r5v0r")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(0, 0, 126, 126)
+
+[node name="erase_1" type="Sprite2D" parent="user_interface/symbol_buttons" unique_id=838393078]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(200, 800)
+texture = ExtResource("4_r5v0r")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(0, 126, 126, 126)
+
+[node name="confirm_0" type="Sprite2D" parent="user_interface/symbol_buttons" unique_id=2076648046]
+z_index = 1
+z_as_relative = false
+position = Vector2(350, 800)
+texture = ExtResource("4_r5v0r")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(252, 0, 126, 126)
+
+[node name="confirm_1" type="Sprite2D" parent="user_interface/symbol_buttons" unique_id=1818775069]
+visible = false
+z_index = 2
+z_as_relative = false
+position = Vector2(350, 800)
+texture = ExtResource("4_r5v0r")
+offset = Vector2(500, 250)
+region_enabled = true
+region_rect = Rect2(252, 126, 126, 126)
 
 [node name="game_menu" type="Node2D" parent="." unique_id=1159752115]
 position = Vector2(0, -104)

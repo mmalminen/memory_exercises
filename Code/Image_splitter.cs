@@ -10,6 +10,10 @@ public partial class Image_splitter : Node2D
     // size of each tile in pixels, defaults to 125x125
     [Export] public int tile_width = 125;
     [Export] public int tile_height = 125;
+    // how many tiles to ignore from the beginning of the split result
+    [Export] public int ignore_first = 0;
+    // how many tiles to ignore from the end of the split result
+    [Export] public int ignore_last = 0;
 
     // stores all tiles split from the atlas, indexed left-to-right, top-to-bottom
     public List<AtlasTexture> Tiles { get; private set; } = new();
@@ -25,7 +29,9 @@ public partial class Image_splitter : Node2D
     // returns the resulting tile list and also stores it in Tiles.
     public List<AtlasTexture> Split(string path)
     {
-        Tiles = Split(path, tile_width, tile_height);
+        List<AtlasTexture> all = Split(path, tile_width, tile_height);
+        int end = all.Count - ignore_last;
+        Tiles = (ignore_first < end) ? all.GetRange(ignore_first, end - ignore_first) : new();
         return Tiles;
     }
 
