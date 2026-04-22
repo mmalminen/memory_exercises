@@ -29,30 +29,14 @@ public partial class Prepare_deck : Node2D
             return;
         }
 
-        // atlas must contain exactly 24 tiles
-        if (tiles.Count != 24)
+        // atlas must contain exactly 22 tiles
+        if (tiles.Count != 22)
         {
-            GD.PushWarning($"Prepare_deck: expected 24 tiles, got {tiles.Count}.");
+            GD.PushWarning($"Prepare_deck: expected 22 tiles, got {tiles.Count}.");
             return;
         }
-
-        Remove_backside_tiles();
         Prepare_card_deck();
         Assign_textures_to_cards();
-    }
-
-    // removes the last 2 tiles from the 'tiles' list
-    // those tiles are reserved for card backsides used by Hover_sprite_pairs
-    void Remove_backside_tiles()
-    {
-        // remove last 2 tiles in the atlas
-        for (int i = 0; i < 2; i++)
-        {
-            int last = tiles.Count - 1;
-            tiles.RemoveAt(last);
-        }
-
-        GD.Print($"Prepare_deck: removed 2 backside tiles, {tiles.Count} card images remaining.");
     }
 
     // picks 12 random unique tiles from the remaining 22 and adds each twice to card_deck
